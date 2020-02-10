@@ -1,25 +1,25 @@
 .header{
   background: #FF0000;
-  color: yellow;
+  color: white;
   text-align: center;
-  font-size: 40px;
+  font-size: 90px;
   font-family: arial;
-  padding: 30px;
+  padding: 10px;
 }
 body {
   background-image: url('musculo.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: contain;
 }
 .menu{
-  background: #FF0000;
+  background: white;
   font font-family: courier;
   overflow: hidden;
   padding: 10px;
 }
 
 .menu a{
-  color: white;
+  color: black;
   padding: 10px;
 }
 
@@ -33,5 +33,5 @@ body {
   text-align: center;
   font-size: 10px;
   font-family: arial;
-  padding: 20px; 
+  padding: 20px;
 }
