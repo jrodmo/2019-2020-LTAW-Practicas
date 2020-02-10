@@ -3,11 +3,26 @@
   color: yellow;
   text-align: center;
   font-size: 40px;
-  font-family: courier;
+  font-family: arial;
   padding: 30px;
 }
 body {
-  background-image: url(musculo.jpg);
+  background-image: url('musculo.jpg');
   background-repeat: no-repeat;
+  background-size: contain;
+}
+.menu{
+  background: #FF0000;
+  font font-family: courier;
+  overflow: hidden;
+  padding: 10px;
+}
 
+.menu a{
+  color: white;
+  padding: 10px;
+}
+
+.menu a:hover{
+  background: #F7FE2E
 }
