@@ -13,7 +13,7 @@ body {
 }
 .menu{
   background: white;
-  font font-family: courier;
+  font-family: courier;
   overflow: hidden;
   padding: 10px;
 }
@@ -27,7 +27,21 @@ body {
   background: #F7FE2E
 }
 
-.footer{
+.cuerpo{
+  background: white;
+  padding: 20px;
+  color: black;
+  font-family: arial;
+}
+
+.p{
+  font-family: arial;
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+.pie{
   background: #FF0000;
   color: white;
   text-align: center;
