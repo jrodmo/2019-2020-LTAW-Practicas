@@ -2,7 +2,7 @@
   background: #FF0000;
   color: white;
   text-align: center;
-  font-size: 90px;
+  font-size: 60px;
   font-family: arial;
   padding: 10px;
 }
@@ -12,7 +12,7 @@ body {
   background-size: contain;
 }
 .menu{
-  background: white;
+  background: red;
   font-family: courier;
   overflow: hidden;
   padding: 10px;
