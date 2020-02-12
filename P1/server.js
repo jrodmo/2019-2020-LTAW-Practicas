@@ -6,6 +6,7 @@ var http = require('http');
 var url=require('url');
 //--modulo fs para lectura de ficheros
 var fs= require('fs');
+var filename="." + q.pathname;
 
 console.log("Arrancando servidor...")
 
@@ -14,7 +15,6 @@ console.log("Arrancando servidor...")
 http.createServer((req, res) => {
   console.log("----------> Peticion recibida")
   var q = url.parse(req.url, true);
-  console.log("Recurso:" + q.pathname)
 
   //-- Obtener fichero a devolver
   if (q.pathname == "/"){
@@ -22,6 +22,8 @@ http.createServer((req, res) => {
 }
   //-- Leer fichero
   fs.readFile(filename, function(err, data) {
+    console.log("Recurso solicitado(URL): " + filename);
+    console.log();
 
     //-- Fichero no encontrado. Devolver mensaje de error
     if (err) {
