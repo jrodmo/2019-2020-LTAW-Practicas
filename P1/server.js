@@ -1,3 +1,4 @@
+//-- Este archivo abre el archivo de solicitud y devuelve el contenido al cliente.
 //-- Puerto donde recibir las peticiones
 const PUERTO = 8080;
 
@@ -6,15 +7,15 @@ var http = require('http');
 var url=require('url');
 //--modulo fs para lectura de ficheros
 var fs= require('fs');
-var filename="." + q.pathname;
 
 console.log("Arrancando servidor...")
 
 //-- Configurar y lanzar el servidor. Por cada peticion recibida
 //-- se imprime un mensaje en la consola
 http.createServer((req, res) => {
-  console.log("----------> Peticion recibida")
+  console.log("----------> Peticion recibida");
   var q = url.parse(req.url, true);
+  var filename="." + q.pathname;
 
   //-- Obtener fichero a devolver
   if (q.pathname == "/"){
