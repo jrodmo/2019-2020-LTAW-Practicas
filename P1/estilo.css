@@ -34,11 +34,20 @@ body {
   font-family: arial;
 }
 
-.p{
+.j{
   font-family: arial;
   text-align: center;
-  color: black;
-  padding: 20px;
+  color: white;
+  padding: 30px;
+  font-size: 40px;
+  background: #FF0000;
+}
+
+j6{
+  text-align: left;
+  margin-left: 0px;
+  font-family: arial;
+  font-size: 10px;
 }
 
 .pie{
