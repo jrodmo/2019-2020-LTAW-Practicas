@@ -2,32 +2,53 @@
 const PUERTO = 8080;
 
 //-- Modulo http
-const http = require('http');
+var http = require('http');
+var url=require('url');
+//--modulo fs para lectura de ficheros
+var fs= require('fs');
 
 console.log("Arrancando servidor...")
 
-//-- Funcion para atender a una Peticion
-//-- req: Mensaje de solicitud
-//-- res: Mensaje de respuesta
-function peticion(req, res) {
+//-- Configurar y lanzar el servidor. Por cada peticion recibida
+//-- se imprime un mensaje en la consola
+http.createServer((req, res) => {
+  console.log("----------> Peticion recibida")
+  var q = url.parse(req.url, true);
+  console.log("Recurso:" + q.pathname)
 
-  //-- Peticion recibida
-  console.log("Peticion recibida!")
-
-  //-- Crear mensaje de respuesta
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Hello World!');
-
+  //-- Obtener fichero a devolver
+  if (q.pathname == "/"){
+    filename += "index.html"
 }
+  //-- Leer fichero
+  fs.readFile(filename, function(err, data) {
 
-//-- Inicializar el servidor
-//-- Cada vez que recibe una petición
-//-- invoca a la funcion peticion para atenderla
-const server = http.createServer(peticion)
+    //-- Fichero no encontrado. Devolver mensaje de error
+    if (err) {
+      res.writeHead(404, {'Content-Type': 'text/html'});
+      return res.end("404 Not Found");
+    }
 
-//-- Configurar el servidor para escuchar en el
-//-- puerto establecido
-server.listen(PUERTO);
+    //-- Tipo mime por defecto: html
+    var mime = "text/html"
 
-console.log("Servidor LISTO!")
-console.log("Escuchando en puerto: " + PUERTO)
+    //-- Es una imagen
+    if (['png', 'jpg'].includes(tipo)) {
+      console.log("IMAGEN!!!!!")
+      mime = "image/" + tipo
+    }
+
+    //-- Es un css
+    if (tipo == "css")
+      mime = "text/css"
+
+    //-- Generar el mensaje de respuesta
+    res.writeHead(200, {'Content-Type': mime});
+    res.write(data);
+    res.end();
+  });
+
+}).listen(PUERTO);
+
+console.log("Servidor corriendo...")
+console.log("Puerto: " + PUERTO)
