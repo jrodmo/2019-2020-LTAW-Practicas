@@ -21,6 +21,9 @@ http.createServer((req, res) => {
   if (q.pathname == "/"){
     filename += "index.html"
 }
+
+  console.log("Filename: " + filename)
+  console.log("Tipo: " + tipo)
   //-- Leer fichero
   fs.readFile(filename, function(err, data) {
     console.log("Recurso solicitado(URL): " + filename);
