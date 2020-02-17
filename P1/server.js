@@ -15,15 +15,16 @@ console.log("Arrancando servidor...")
 http.createServer((req, res) => {
   console.log("----------> Peticion recibida");
   var q = url.parse(req.url, true);
-  var filename="." + q.pathname;
+  var filename= "" ;
 
   //-- Obtener fichero a devolver
-  if (q.pathname == "/"){
+  if (q.pathname == "/")
     filename += "index.html"
-}
+    else{
+			filename= "." + q.pathname
+		}
 
-  console.log("Filename: " + filename)
-  console.log("Tipo: " + tipo)
+	tipo= filename.split(".")[1]
   //-- Leer fichero
   fs.readFile(filename, function(err, data) {
     console.log("Recurso solicitado(URL): " + filename);
@@ -45,8 +46,14 @@ http.createServer((req, res) => {
     }
 
     //-- Es un css
-    if (tipo == "css")
+    if (tipo == "css"){
       mime = "text/css"
+    }
+    
+    if (tipo == "json"){
+      mime = "text/json"
+    }
+    
 
     //-- Generar el mensaje de respuesta
     res.writeHead(200, {'Content-Type': mime});
@@ -56,5 +63,5 @@ http.createServer((req, res) => {
 
 }).listen(PUERTO);
 
-console.log("Servidor corriendo...")
+console.log("corriendo puerto")
 console.log("Puerto: " + PUERTO)
