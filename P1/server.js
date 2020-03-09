@@ -49,11 +49,11 @@ http.createServer((req, res) => {
     if (tipo == "css"){
       mime = "text/css"
     }
-    
+
     if (tipo == "json"){
       mime = "text/json"
     }
-    
+
 
     //-- Generar el mensaje de respuesta
     res.writeHead(200, {'Content-Type': mime});
