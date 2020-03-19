@@ -7,7 +7,6 @@ from django.db import models
 # Create your models here.
 class tecnologia (models.Model):
     name = models.CharField( max_length=50)
-    image = models.ImageField(upload_to='static', default = 0)
     precio = models.FloatField()
     stock = models.IntegerField()
 
@@ -16,7 +15,6 @@ class tecnologia (models.Model):
 
 class ropa (models.Model):
     name = models.CharField( max_length=50)
-    image = models.ImageField(upload_to='static', default = 0)
     precio = models.FloatField()
     stock = models.IntegerField()
 
@@ -25,7 +23,6 @@ class ropa (models.Model):
 
 class alimentacion (models.Model):
     name = models.CharField( max_length=50)
-    image = models.ImageField(upload_to='static', default = 0)
     precio = models.FloatField()
     stock = models.IntegerField()
 
@@ -34,7 +31,6 @@ class alimentacion (models.Model):
 
 class suplementacion (models.Model):
     name = models.CharField( max_length=50)
-    image = models.ImageField(upload_to='static', default = 0)
     precio = models.FloatField()
     stock = models.IntegerField()
 
