@@ -1,5 +1,4 @@
-# -- Fichero mi_tienda/admin.py
+# -*- coding: utf-8 -*-
 from django.contrib import admin
-from mi_tienda.models import Producto
 
-admin.site.register(Producto)
+# Register your models here.

@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel=StyleSheet href="{% static 'style.css'%}">
+    <title> FORMULARIO</title>
+  </head>
+  <body>
+    <h1> SOLICITUD de PEDIDO </h1>
+    <hr>
+
+    <a href="./index.html">
+      <img src="/static/back.png" alt="RETURN" width="70" height="90">
+    </a>
+
+    <p> A continuación, rellene los siguientes datos para poder tramitar la solicitud. </p>
+    <div>
+      <form>
+        Nombre: <input type="text"> </input> <br>
+        Apellidos: <input type="text"> </input> <br>
+        Teléfono de contacto: <input type="text"> </input><br>
+        Email: <input type="text"> </input><br>
+        Dirección de envio: <input type="text"> </input>
+        <br>
+
+        Nombre del producto: <input type="text"> </input>
+        <br>
+
+        <p> Compruebe que todos los datos son correctos. </p>
+        <p> Si es así, pulse ENVIAR </p>
+
+        <button type="submit " > ENVIAR </input>
+      </form>
+    </div>
+  </body>
+</html>
