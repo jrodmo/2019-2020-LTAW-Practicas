@@ -44,30 +44,30 @@ http.createServer((req, res) => {
 
         case "/carrit_barritaenergetica":
 
-            cookie = crearCookie(cookie, emptycarrit, 'Barritaenergetica');
+            cookie = crearCookie(cookie, emptycarrit, 'Barrita energetica');
             res.setHeader('Set-Cookie', cookie)
             res.statusCode = 200;
-            mensaje = "<li><h6>BarritaenergeticaI</h6></li>";
+            mensaje = "<li><h6>Barrita energeticaI</h6></li>";
             content = crearHtml(mensaje, 4);
             console.log("GET 200 OK resource: " + "carrit_barritaenergetica");
             break;
 
         case "/carrit_barritaoreo":
 
-            cookie = crearCookie(cookie, emptycarrit, 'Barritaoreo');
+            cookie = crearCookie(cookie, emptycarrit, 'Barrita oreo');
             res.setHeader('Set-Cookie', cookie)
             res.statusCode = 200;
-            mensaje = "<li><h6>Barritaoreo</h6></li>";
+            mensaje = "<li><h6>Barrita oreo</h6></li>";
             content = crearHtml(mensaje, 4);
             console.log("GET 200 OK resource: " + "carrit_barritaoreo");
             break;
 
         case "/carrit_barritaproteica":
 
-            cookie = crearCookie(cookie, emptycarrit, 'Barritaproteica');
+            cookie = crearCookie(cookie, emptycarrit, 'Barrita proteica');
             res.setHeader('Set-Cookie', cookie)
             res.statusCode = 200;
-            mensaje = "<li><h6>Barritaproteica</h6></li>";
+            mensaje = "<li><h6>Barrita proteica</h6></li>";
             content = crearHtml(mensaje, 4);
             console.log("GET 200 OK resource: " + "carrit_barritaproteica");
             break;
@@ -213,7 +213,7 @@ http.createServer((req, res) => {
     res.statusCode = 200;
       content = `
       {
-        "productos": ["creatina", "caseina", "proteina", "cafeina", "glutamina", "bcaa", "barritaoreo", "barritaproteica", "barritaenergetica"]
+        "productos": ["CREATINA", "CASEINA", "PROTEINA", "CAFEINA", "GLUTAMINA", "BCAA", "BARRITA OREO", "BARRITA PROTEICA", "BARRITA ENERGETICA"]
       }
       `
       res.setHeader('Content-Type', 'application/json')
@@ -562,7 +562,7 @@ function buscarProductos(data)
   var html = "<br>Productos: <br><ul>";
   productos = `
   {
-    "productos": ["alimentacion", "tecnologia", "ropa", "suplementacion"]
+    "productos": ["ALIMENTACION", "TECNOLOGIA", "ROPA", "SUPLEMENTACION"]
   }
   `
   var encontrado = false;
