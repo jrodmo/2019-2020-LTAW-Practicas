@@ -98,6 +98,8 @@ http.createServer((req, res) => {
             content = crearHtml(mensaje, 4);
             console.log("GET 200 OK resource: " + "carrit_proteina");
             break;
+            
+            
         case "/carrit_glutamina":
 
             cookie = crearCookie(cookie, emptycarrit, 'Glutamina');
@@ -132,7 +134,7 @@ http.createServer((req, res) => {
             res.statusCode = 404;
           } else {
               carrito = "<li><h6>"
-                carrito += cookie.split("carrito=")[1]
+                carrito += cookie.split("carrit=")[1]
                 //console.log("CARRITO-->", carrito);
                 while (carrito.includes("&") || carrito.includes("_") || carrito.includes("%")){
                   carrito = carrito.replace("&","</h6></li><li><h6><br>");
@@ -396,7 +398,8 @@ function crearHtml(datos, opcion){
 
                       `
              html += datos;
-             html +=`
+             html +=
+                      `
                           </ul>
                           <br>
                           <br>
