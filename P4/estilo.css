@@ -1,0 +1,50 @@
+body {
+  background-image: url('fondo.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+#msg {
+  width: 80%;
+}
+
+#display {
+  background: #74ebd5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 700px;
+  height: 500px;
+  float: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+}
+
+.j{
+  background: #04FBF0;
+  color: #2904FB;
+  text-align: center;
+  font-size: 60px;
+  font-family: arial;
+  padding: 20px;
+}
+
+.g{
+  background: #2904FB;
+  color: #04FBF0;
+  text-align: left;
+  font-size: 20px;
+  font-family: arial;
+  padding: 20px;
+}
+
+.pie{
+  background: #04FBF0;
+  color: #2904FB;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  padding: 20px;
+}
