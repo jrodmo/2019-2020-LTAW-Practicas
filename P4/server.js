@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 });
 
 //-- Servir el CSS:
-app.get('/style.css', function(req,res) {
+app.get('/estilo.css', function(req,res) {
   res.sendFile(__dirname + '/estilo.css');
 })
 

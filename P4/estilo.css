@@ -9,10 +9,9 @@ body {
 }
 
 #display {
-  background: #74ebd5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #74ebd5;
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+  background: linear-gradient(to right, #ACB6E5, #74ebd5);
   width: 700px;
   height: 500px;
   float: center;
@@ -20,6 +19,18 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 25px;
+}
+#mensajes {
+  background: #74ebd5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 50px;
+  height: 500px;
+  float: center;
+  margin: auto;
+  color:white; 
+
 }
 
 .j{
